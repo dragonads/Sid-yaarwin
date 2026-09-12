@@ -23,10 +23,15 @@
   </script>
 
   <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1811609399855362&ev=PageView&noscript=1"/>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1811609399855362&ev=PageView&noscript=1"
+    />
   </noscript>
   <!-- End Meta Pixel Code -->
+
 
   <style>
     * {
@@ -35,15 +40,25 @@
       box-sizing: border-box;
     }
 
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
     body {
       min-height: 100vh;
+      min-height: 100svh;
       background: #000;
       color: #fff;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+
       padding: 20px;
+      overflow: hidden;
     }
 
     .page {
@@ -53,80 +68,162 @@
     }
 
     .logo {
+      display: block;
+
       width: 190px;
       height: 190px;
+
       object-fit: cover;
       border-radius: 50%;
+
       margin: 0 auto 22px;
-      box-shadow: 0 0 25px rgba(92, 255, 0, 0.45);
+
+      box-shadow:
+        0 0 15px rgba(99, 255, 0, 0.35),
+        0 0 35px rgba(99, 255, 0, 0.18);
     }
 
     h1 {
       font-size: 26px;
+      line-height: 1.2;
       font-weight: 700;
+
       margin-bottom: 12px;
     }
 
     .text {
       color: #aaa;
+
       font-size: 15px;
       line-height: 1.5;
-      margin-bottom: 25px;
+
+      margin: 0 auto 25px;
+
+      max-width: 350px;
     }
 
     .join-btn {
+      width: 100%;
+      max-width: 320px;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       gap: 10px;
-      width: 100%;
-      max-width: 320px;
-      margin: auto;
+
+      margin: 0 auto;
+
       padding: 15px 25px;
+
       border-radius: 12px;
+
       background: #63ff00;
       color: #000;
+
       text-decoration: none;
+
       font-size: 17px;
       font-weight: 700;
-      box-shadow: 0 0 22px rgba(99, 255, 0, 0.35);
-      transition: 0.2s ease;
+
+      box-shadow:
+        0 0 18px rgba(99, 255, 0, 0.35);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
     .join-btn:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 30px rgba(99, 255, 0, 0.55);
+
+      box-shadow:
+        0 0 28px rgba(99, 255, 0, 0.55);
+    }
+
+    .join-btn:active {
+      transform: scale(0.97);
     }
 
     .telegram {
       width: 22px;
       height: 22px;
+
+      flex-shrink: 0;
     }
 
     .footer {
       margin-top: 22px;
+
       font-size: 12px;
       color: #555;
+    }
+
+
+    /* Mobile */
+    @media (max-width: 480px) {
+
+      body {
+        padding: 18px;
+      }
+
+      .logo {
+        width: 175px;
+        height: 175px;
+
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .text {
+        font-size: 14px;
+        margin-bottom: 22px;
+      }
+
+      .join-btn {
+        max-width: 310px;
+
+        padding: 14px 22px;
+
+        font-size: 16px;
+      }
+
+      .footer {
+        margin-top: 18px;
+      }
     }
   </style>
 </head>
 
+
 <body>
 
-  <div class="page">
+  <main class="page">
 
+    <!-- Logo -->
     <img
       src="images.jpeg"
       alt="Yaarwin Offical Logo"
       class="logo"
     >
 
-    <h1>𓆩 𝐘𝐚𝐚𝐫𝐰𝐢𝐧 𝐎𝐟𝐟𝐢𝐜𝐚𝐥 𓆪</h1>
 
+    <!-- Channel Name -->
+    <h1>
+      𓆩 𝐘𝐚𝐚𝐫𝐰𝐢𝐧 𝐎𝐟𝐟𝐢𝐜𝐚𝐥 𓆪
+    </h1>
+
+
+    <!-- Description -->
     <p class="text">
       Join our official Telegram channel for the latest updates and information.
     </p>
 
+
+    <!-- Join Button -->
     <a
       href="https://t.me/+rWkOF72xHwNjMDk9"
       class="join-btn"
@@ -134,17 +231,28 @@
       rel="noopener noreferrer"
       onclick="fbq('track', 'Subscribe');"
     >
-      <svg class="telegram" viewBox="0 0 24 24" fill="currentColor">
+
+      <!-- Telegram Icon -->
+      <svg
+        class="telegram"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
         <path d="M21.5 3.5L18.3 20c-.24 1.16-.87 1.45-1.76.9l-4.86-3.58-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.96 9.03-8.16c.39-.35-.09-.55-.61-.2L6.1 13.55l-4.8-1.5c-1.04-.33-1.06-1.04.22-1.54L20.3 3.08c.87-.32 1.63.2 1.2.42z"/>
       </svg>
+
       Join Now
+
     </a>
 
+
+    <!-- Footer -->
     <div class="footer">
       Official Telegram Community
     </div>
 
-  </div>
+  </main>
 
 </body>
 </html>
